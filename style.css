@@ -15,10 +15,6 @@ main a:not(.btn){text-decoration:underline;text-underline-offset:.2em;text-decor
 .skip:focus{left:8px}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
-.a11y{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end;padding:8px 24px 0;max-width:1180px;margin:0 auto;font-size:.85rem}
-.a11y button{font:inherit;min-height:44px;padding:6px 14px;border-radius:8px;border:1px solid var(--muted);background:transparent;color:var(--muted);cursor:pointer}
-.a11y button:hover{background:var(--leaf)}
-.a11y button[aria-pressed=true]{background:var(--green);color:var(--bg)}
 .hd{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 16px;padding:14px 24px 18px;max-width:1180px;margin:0 auto}
 .logo{font-family:Georgia,serif;font-size:1.5rem;font-weight:600;color:var(--green);text-decoration:none}
 .nav{display:flex;flex-wrap:wrap;gap:6px}
@@ -80,8 +76,7 @@ body{font-size:1.0625rem}
 .box{padding:22px}
 .note{padding:22px}
 .page{padding:24px 0 56px;gap:24px}
-.hd,.a11y{padding-left:16px;padding-right:16px}
-.hd{gap:8px;padding-bottom:12px}
+.hd,.hd{gap:8px;padding-bottom:12px}
 .nav{gap:4px;margin:0 -8px}
 .nav a{padding:8px 12px;font-size:.95rem}
 .wrap{padding-left:16px;padding-right:16px}
@@ -96,11 +91,4 @@ body{font-size:1.0625rem}
 }
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
 @media(prefers-contrast:more){:root{--muted:var(--ink)}.card,.box,.note,.chips li{border:2px solid currentColor}}
-@media print{.a11y,.skip,.nav,.hero{display:none}body{background:#fff;color:#000}}
-/* Käyttäjän valitsema korkea kontrasti */
-:root[data-contrast=high]{color-scheme:light;--bg:#fff;--card:#fff;--ink:#000;--muted:#000;--green:#000;--clay:#5A2A0A;--clay-d:#000;--sage:#fff;--leaf:#e3e3e3;--btn:#000;--btn-h:#333;--on-btn:#fff;--cta:#000;--cta-fg:#fff;--dark:#000;--eyebrow:#000;--line:#000;--hero:#fff}
-:root[data-contrast=high] .card,:root[data-contrast=high] .box,:root[data-contrast=high] .note,:root[data-contrast=high] .chips li,:root[data-contrast=high] .three>div{border:2px solid #000}
-:root[data-contrast=high] .ph{display:none}
-:root[data-contrast=high] a{text-decoration:underline}
-:root[data-contrast=high] .btn.l{border-color:#fff}
-:root[data-contrast=high] .cta p,:root[data-contrast=high] .ft{color:#fff}
+@media print{
